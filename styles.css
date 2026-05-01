@@ -1,5 +1,32 @@
+@font-face {
+    font-family: "Matemasie";
+    src: url("fonts/Matemasie-Regular.ttf") format("truetype");
+}
+
+
 body{
-    background-image: url('images/gradient bg.jpeg');
+    background-image: url('images/gradient-bg.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-family: "Matemasie";
+    color: white;
+    letter-spacing: 4px;
+}
+
+header h3 {
+    color: white;
+    font-family: cursive;
+    margin-top: 2px;
 }
