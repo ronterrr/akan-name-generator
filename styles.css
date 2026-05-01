@@ -3,6 +3,10 @@
     src: url("fonts/Matemasie-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Aladin";
+  src: url("fonts/Aladin-Regular.ttf") format("truetype");
+}
 
 body{
     background-image: url('images/gradient-bg.jpeg');
@@ -17,16 +21,87 @@ header{
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
+    cursor: default;
 }
 
 header h1 {
     font-family: "Matemasie";
     color: white;
     letter-spacing: 4px;
+    font-size: 50px;
 }
 
 header h3 {
     color: white;
     font-family: cursive;
     margin-top: 2px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.forms label{
+    color: white;
+    font-family: "Aladin";
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.gender-section{
+    margin: 30px;
+}
+
+input[type="radio"]{
+    accent-color: brown;
+}
+
+input[type="radio"]:checked + label{
+    color: brown;
+}
+
+#dateOfBirth{
+    height: 30px;
+    background-color: white;
+    color: brown;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-family: "Aladin";
+    text-align: center;
+    font-size: 13px;
+}
+
+.male-female{
+    margin-top: 10px;
+}
+
+.male-female label{
+    font-size: 25px;
+}
+
+.male-female label:hover{
+    cursor: pointer;
+    color: brown;
+}
+
+.submit-button{
+    color: white;
+    background-color: black;
+    width: 80px;
+    height: 30px;
+    font-family: "Aladin";
+    font-size: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.submit-button:hover{
+    color: brown;
+    cursor: pointer;
 }
