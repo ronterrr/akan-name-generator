@@ -108,6 +108,18 @@ input[type="radio"]:checked + label{
     cursor: pointer;
 }
 
+.hideForms{
+    display: none;
+}
+
+#result{
+    text-align: center;
+    font-family: "Aladin";
+    font-size: 40px;
+    color: white;
+    margin-top: 70px;
+}
+
 @media (max-width: 830px) {
     header h1{
         font-size: 40px;

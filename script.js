@@ -4,6 +4,9 @@ const maleGender = document.getElementById("male-button");
 const femaleGender = document.getElementById("female-button");
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const currentDate = new Date(); //CURRENT DATE OBJECT
+const maleAkanNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+const femaleAkanNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+const resultDiv = document.getElementById("result");
 
 function onSubmit(event){
     event.preventDefault();
@@ -36,6 +39,16 @@ function onSubmit(event){
     }   
     else{ //Valid
         console.log("Date is in the past");
+        let userAkanName = undefined;
+
+        if (userGender === "Male"){
+            userAkanName = maleAkanNames[date.getDay()];
+        } else if (userGender === "Female"){
+            userAkanName = femaleAkanNames[date.getDay()];
+        }
+        console.log(`User's Akan name is: ${userAkanName}`);
+        infoForm.classList.add("hideForms");
+        resultDiv.textContent = `Your Akan name is: ${userAkanName}!!`;
     }
 
 }
