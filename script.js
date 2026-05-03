@@ -54,6 +54,10 @@ function onSubmit(event){
 
     const dayOfWeek = days[date.getDay()];
 
+    console.log(formulaDayOfWeek == date.getDay() ? "match" : "don't match")
+
+    
+
     if (date > currentDate){
         alert("We aren't there yet... Please enter a valid date!");
     } 
@@ -62,14 +66,15 @@ function onSubmit(event){
     }   
     else{ //Valid
         let userAkanName = undefined;
-
-        if (userGender === "Male"){
-            userAkanName = maleAkanNames[date.getDay()];
-        } else if (userGender === "Female"){
-            userAkanName = femaleAkanNames[date.getDay()];
+        if (formulaDayOfWeek == date.getDay()){
+            if (userGender === "Male"){
+                userAkanName = maleAkanNames[date.getDay()];
+            } else if (userGender === "Female"){
+                userAkanName = femaleAkanNames[date.getDay()];
+            }
+            infoForm.classList.add("hideForms");
+            resultDiv.textContent = `Your Akan name is: ${userAkanName}!!`;
         }
-        infoForm.classList.add("hideForms");
-        resultDiv.textContent = `Your Akan name is: ${userAkanName}!!`;
     }
 
 }
