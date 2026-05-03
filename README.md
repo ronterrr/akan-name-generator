@@ -1,6 +1,6 @@
 # AKAN NAME GENERATOR - Daveny
 
-### (link placeholder)
+### [My Akan Name Generator](https://ronterrr.github.io/akan-name-generator/)
 
 ## About
 This is the repository for my akan-name-generator website.
