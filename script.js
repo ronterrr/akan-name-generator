@@ -19,26 +19,20 @@ function onSubmit(event){
     userGender = "Female";
     }
 
-    console.log(`DOB: ${dobValue}, GENDER: ${userGender}`);
 
     let date = new Date(dobValue); //USER DATE OBJECT
-    console.log(date);
 
     // Validating entered data
 
     const dayOfWeek = days[date.getDay()];
-    console.log(dayOfWeek);
 
     if (date > currentDate){
-        console.log("Date is in the future");
         alert("We aren't there yet... Please enter a valid date!");
     } 
     else if (date.getFullYear() < 1900){
-        console.log("Date is way too far in the past");
         alert("You can't be that old!! Please enter a valid date!");
     }   
     else{ //Valid
-        console.log("Date is in the past");
         let userAkanName = undefined;
 
         if (userGender === "Male"){
@@ -46,7 +40,6 @@ function onSubmit(event){
         } else if (userGender === "Female"){
             userAkanName = femaleAkanNames[date.getDay()];
         }
-        console.log(`User's Akan name is: ${userAkanName}`);
         infoForm.classList.add("hideForms");
         resultDiv.textContent = `Your Akan name is: ${userAkanName}!!`;
     }
