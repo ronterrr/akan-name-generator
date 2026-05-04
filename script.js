@@ -40,14 +40,11 @@ function onSubmit(event){
     let ccDigits = Number(`${stringYear[0]}${stringYear[1]}`);
     let yyDigits = Number(`${stringYear[2]}${stringYear[3]}`);
 
-    // let formulaDayOfWeek = ((((ccDigits/4)-2*ccDigits-1) + ((5*yyDigits)/4) + ((26*(mmDigit+1))/10) + ddDigit)%7);
 
     let firstEquation = Math.floor((ccDigits/4)-2*ccDigits-1);
     let secondEquation = Math.floor((5*yyDigits)/4);
     let thirdEquation = Math.floor((26*(mmDigit+1))/10);
     let formulaDayOfWeek = ((((firstEquation + secondEquation + thirdEquation + ddDigit)%7)+7)%7);
-    // console.log(formulaDayOfWeek);
-    // console.log(date.getDay());
 
 
     // Validating entered data
