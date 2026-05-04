@@ -16,7 +16,7 @@ function onSubmit(event){
     if (maleGender.checked){
         userGender = "Male";
     } else if (femaleGender.checked){
-    userGender = "Female";
+        userGender = "Female";
     }
 
 
@@ -46,8 +46,8 @@ function onSubmit(event){
     let secondEquation = Math.floor((5*yyDigits)/4);
     let thirdEquation = Math.floor((26*(mmDigit+1))/10);
     let formulaDayOfWeek = ((((firstEquation + secondEquation + thirdEquation + ddDigit)%7)+7)%7);
-    console.log(formulaDayOfWeek);
-    console.log(date.getDay());
+    // console.log(formulaDayOfWeek);
+    // console.log(date.getDay());
 
 
     // Validating entered data
