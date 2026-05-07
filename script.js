@@ -71,6 +71,7 @@ function onSubmit(event){
             }
             infoForm.classList.add("hideForms");
             resultDiv.textContent = `Your Akan name is: ${userAkanName}!!`;
+            setTimeout( () => {window.location.reload();}, 3000);
         }
     }
 
